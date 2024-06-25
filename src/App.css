@@ -5,6 +5,10 @@
   overflow: hidden;
 }
 
+p {
+  margin:0
+}
+
 .landing-page {
   background-image: url("./assets/Landing-2.jpeg");
   background-size: cover;
@@ -15,12 +19,8 @@
 .custom-container {
   height: 100vh;
   width: 100vw;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: silver;
 }
 
@@ -33,15 +33,6 @@
   /*animation: rotation 6s infinite linear;*/
 }
 
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .target {
   font-size: 3em;
   transition: font-size 2s;
@@ -51,8 +42,19 @@
   font-size: 3.5em;
 }
 
-.fade-in {
+.fade-in-3{
   animation: fade-in-animation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.fade-in-5{
+  animation: fade-in-animation ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.fade-in-7{
+  animation: fade-in-animation ease 7s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -65,3 +67,22 @@
     opacity: 1;
   }
 }
+
+.person-card {
+  padding-left: 10%;
+  padding-top: 10%;
+}
+
+.headshot-image {
+  height: 8em;
+  width: 8em;
+  border-radius: 50%;
+}
+
+.introductions {
+  font-size: 1.5em;
+}
+
+/*.thirds {*/
+/*  height: 33vh;*/
+/*}*/
