@@ -13,14 +13,6 @@ const PersonCard = () => {
                     <p className='fade-in-5'>Hey, thanks for stopping by</p>
                     <p className='fade-in-7'>I'm Trey, Software Engineer and Project Manager</p>
                 </div>
-                <AwesomeButton
-                    cssModule={AwesomeButton}
-                    type="Primary"
-                    onPress={() => {
-                        console.log("Pressed")
-                    }}>
-                    Button Text
-                </AwesomeButton>
             </div>
             <div className='grid col'>
 

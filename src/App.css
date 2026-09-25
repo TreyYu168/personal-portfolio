@@ -22,6 +22,9 @@ p {
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
   color: silver;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo.react:hover {
@@ -59,6 +62,18 @@ p {
   animation-fill-mode: forwards;
 }
 
+
+
+.content-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.content-visible {
+  animation: fade-in-animation ease 1.5s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes fade-in-animation {
   0% {
     opacity: 0;
@@ -67,10 +82,9 @@ p {
     opacity: 1;
   }
 }
-
 .person-card {
-  padding-left: 10%;
-  padding-top: 10%;
+  text-align: center;
+  margin-bottom: 33vh;
 }
 
 .headshot-image {
@@ -83,6 +97,40 @@ p {
   font-size: 1.5em;
 }
 
-/*.thirds {*/
-/*  height: 33vh;*/
-/*}*/
+.arrow-container {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 25px;
+  height: 20px;
+  opacity: 0;
+  animation: fade-in-animation ease 2s 5s forwards, bounce 1600ms 5s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  cursor: pointer;
+}
+
+.arrow-down {
+  height: 6px;
+  background: silver;
+  transform: rotate(45deg);
+  transform-origin: 0% 0%;
+  border-radius: 5px;
+}
+
+.arrow-down:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 100%;
+  border-radius: 5px;
+  background: silver;
+  transform: rotate(-90deg);
+  transform-origin: 0% 100%;
+}
+
+@keyframes bounce {
+  50% { transform: translateY(-15px); }
+}
